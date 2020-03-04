@@ -93,6 +93,12 @@ header {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
+    padding: 29px;
+}
+.navbar>a:hover {
+    background: #fff;
+    color: black;
+    padding: 29px;
 }
 .logo>h1 {
     background: #fff;
