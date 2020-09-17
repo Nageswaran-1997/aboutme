@@ -25,6 +25,11 @@ header {
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 90px;
     border-bottom: 1px solid #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 .container {
     max-width: 1224px;
@@ -75,13 +80,14 @@ header {
 
 /*section1*/
 .section-one,.section-two {
+    padding-top: 100px;
     height: 100vh;
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .img-pic {
-    background: url("/Images/my-edit.png") no-repeat center;
+    background: url("/Images/logo\ \(1\).png") no-repeat center;
     background-size: contain;
     width: 400px;
     height: 400px;
@@ -211,6 +217,7 @@ header {
 @media only screen and (max-width: 1023px) {
     header {
         height: 100vh;
+        position: inherit;
     }
     header .container {
         flex-direction: column;
@@ -243,9 +250,20 @@ header {
     }
     .section-one {
         height: 100%;
+        padding-top: 20px;
+    }
+    .section-two {
+        padding-top: 0;
+        height: 100%;
+    }
+    .pro-list a {
+        margin-right: 0;
     }
     .section-one .container {
         flex-direction: column;
+    }
+    .card {
+        width: 280px;
     }
     .skill-line {
         width: 280px;
