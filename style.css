@@ -156,6 +156,9 @@ header {
     margin-top: 5px;
     margin-right: 20px;
 }
+.skills {
+    width: 800px;
+}
 .skill-set {
     margin-bottom: 5px;
 }
@@ -326,16 +329,16 @@ header {
         flex-direction: column;
     }
     .card {
-        width: 280px;
+        width: 100%;
     }
-    .skill-line {
-        width: 280px;
+    .skill-line,.skills {
+        width: 100%;
     }
     .skill-bar {
-        width: 240px;
+        width: 80%;
     }
     .card-container {
-        width: 280px;
+        width: 100%;
         height: 280px;
         margin-top: 40px;
     }
