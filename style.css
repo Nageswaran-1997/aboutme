@@ -86,13 +86,75 @@ header {
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.img-pic {
-    background: url("/Images/logo\ \(1\).png") no-repeat center;
+.card-container {
+    cursor: pointer;
+    height: 450px;
+    perspective: 600;
+    position: relative;
+    width: 450px;
+}
+.cardss {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+}
+.cardss:hover {
+    transform: rotateY(180deg);
+}
+.cardss .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+.fronts {
+    background-color: #288cbe;
+}
+.my-dps {
+    background: url("/Images/logo-v1.png") no-repeat center;
     background-size: contain;
-    width: 400px;
-    height: 400px;
-    border: 2px solid #288cbe;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.my-lab {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.cardss .back {
+    background: #eaeaed;
+    color: #0087cc;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.back h1 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #288cbe;
+}
+.back p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.back p b {
+    margin-right: 20px;
+}
+.nextarrow {
+    background: url("/Images/right-arrow.svg") no-repeat center;
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
 }
 .skill-set {
     margin-bottom: 5px;
@@ -244,6 +306,7 @@ header {
         height: 200px;
         margin: 0 auto;
         margin-bottom: 40px;
+        border: 4px solid #288cbe;
     }
     .logo-group .logo {
         display: none;
@@ -271,10 +334,16 @@ header {
     .skill-bar {
         width: 240px;
     }
-    .img-pic {
-        width: 250px;
-        height: 250px;
+    .card-container {
+        width: 280px;
+        height: 280px;
         margin-top: 40px;
+    }
+    .back h1 {
+        font-size: 16px;
+    }
+    .back p {
+        font-size: 14px;
     }
     .pro-list {
         grid-template-columns: repeat(1,1fr);
